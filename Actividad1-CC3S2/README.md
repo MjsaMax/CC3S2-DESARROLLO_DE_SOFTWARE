@@ -60,26 +60,24 @@ Al finalizar, deberías poder:
 * **Pregunta retadora:** señala un **contexto real** donde un enfoque cercano a cascada sigue siendo razonable (por ejemplo, sistemas con certificaciones regulatorias estrictas o fuerte acoplamiento hardware). Expón **dos criterios verificables** y **los trade-offs** (velocidad vs. conformidad/seguridad).
 
 **Qué se validará:** que tu imagen muestre ciclos de feedback y no solo "cajas",  que cites al menos una fuente seria.
-<div style="background-color:black; padding:10px; border-radius:5px;">
-<span style="color:white;">
-DevOps: Es una cultura de colaboración del equipo de desarrollo (Devs) y el equipo de operaciones IT (Ops).  
+```diff
++DevOps: Es una cultura de colaboración del equipo de desarrollo (Devs) y el equipo de operaciones IT (Ops).  
 
-DevSecOps: Es la incorporación de la seguridad en el desarrollo de las aplicaciones usando la cultura DevOps.  
++DevSecOps: Es la incorporación de la seguridad en el desarrollo de las aplicaciones usando la cultura DevOps.  
 
-CI/CD: Integración continua: regularmente hacer "build, test and merge" al código principal de un proyecto; trabajan para identificar problemas tempranos, con esto, brinda feedback a los desarrolladores para prevenir conflictos. Continuous Deployment: Este toma la automatización y la implementación de software para la producción de este.  
++CI/CD: Integración continua: regularmente hacer "build, test and merge" al código principal de un proyecto; trabajan para identificar problemas tempranos, con esto, brinda feedback a los desarrolladores para prevenir conflictos. Continuous Deployment: Este toma la automatización y la implementación de software para la producción de este.  
 
-Agile: Es un método de gestor de trabajo en la que "agiliza" mayor los proyectos que el método que más prevalecía, "waterfall" o el método de la cascada.  
++Agile: Es un método de gestor de trabajo en la que "agiliza" mayor los proyectos que el método que más prevalecía, "waterfall" o el método de la cascada.  
 
-DevOps acelera el desarrollo debido a que, a comparación de cascada, este puede detectar tempranamente riesgos y, con la incorporación de la nube, sabiendo que estos se actualizan más constantemente; con el método de cascada, pues dependería de revisiones manuales.  
++DevOps acelera el desarrollo debido a que, a comparación de cascada, este puede detectar tempranamente riesgos y, con la incorporación de la nube, sabiendo que estos se actualizan más constantemente; con el método de cascada, pues dependería de revisiones manuales.  
 
-Un caso particular es el desarrollo de Airbus A350 XWB (un avión comercial), en el que el ciclo de desarrollo fue de cascada. Sabiendo que este reporte en particular es reciente, "MAY 2025", se sabe que "waterfall" o cascada sigue siendo útil debido a las regulaciones estrictas que existen en cada paso del desarrollo del proyecto. Antes de disponer del hardware, se probaron los sistemas por medio de una simulación interna (indica que los objetivos son claros y concretos, en la que favorece el uso de cascada).  
++Un caso particular es el desarrollo de Airbus A350 XWB (un avión comercial), en el que el ciclo de desarrollo fue de cascada. Sabiendo que este reporte en particular es reciente, "MAY 2025", se sabe que "waterfall" o cascada sigue siendo útil debido a las regulaciones estrictas que existen en cada paso del desarrollo del proyecto. Antes de disponer del hardware, se probaron los sistemas por medio de una simulación interna (indica que los objetivos son claros y concretos, en la que favorece el uso de cascada).  
 
-Los Criterios: Airbus A350 está respaldada por el standard DO-178C Level A con cobertura estructural MC/DC; la integración secuencial que tiene cascada hace que los fallos en fases tardías sean más costosos para la empresa.  
++Los Criterios: Airbus A350 está respaldada por el standard DO-178C Level A con cobertura estructural MC/DC; la integración secuencial que tiene cascada hace que los fallos en fases tardías sean más costosos para la empresa.  
 
-Trade-off: Respecto a la velocidad que usa el enfoque cascada, este tiene poca flexibilidad a cambios, pero el cumplimiento de la norma DO-178C brinda una mayor seguridad al producto.
++Trade-off: Respecto a la velocidad que usa el enfoque cascada, este tiene poca flexibilidad a cambios, pero el cumplimiento de la norma DO-178C brinda una mayor seguridad al producto.
 
-</span>
-</div>
+```
 
 
 #### 4.2 Ciclo tradicional de dos pasos y silos (limitaciones y anti-patrones)
@@ -89,16 +87,14 @@ Trade-off: Respecto a la velocidad que usa el enfoque cascada, este tiene poca f
 * **Pregunta retadora:** define **dos anti-patrones** ("throw over the wall", seguridad como auditoría tardía) y explica **cómo** agravan incidentes (mayor MTTR, retrabajos, degradaciones repetitivas).
 
 **Señal de investigación genuina:** usas términos como handoff, costo de integración tardía, asimetrías de información y los explicas con tus palabras.
-<div style="background-color:black; padding:10px; border-radius:5px;">
-<span style="color:white;"> 
-El problema no se adapta bien al cambio, debido a que, al no automatizar o no existir un ciclo continuo, este puede hacer despliegues erróneos. Además, debido a las largas colas, podría existir retrasos si se quiere dar feedback.  
+```diff
++El problema no se adapta bien al cambio, debido a que, al no automatizar o no existir un ciclo continuo, este puede hacer despliegues erróneos. Además, debido a las largas colas, podría existir retrasos si se quiere dar feedback.  
 
-"Throw over the wall": Cuando los desarrolladores hacen su labor sin colaborar, no brindan documentación ni contexto al equipo de operaciones. Un incidente sería que el equipo de operaciones perdería tiempo en entender.  
++"Throw over the wall": Cuando los desarrolladores hacen su labor sin colaborar, no brindan documentación ni contexto al equipo de operaciones. Un incidente sería que el equipo de operaciones perdería tiempo en entender.  
 
-"Seguridad como auditoría tardía": Tratar la seguridad a último momento en el ciclo de desarrollo. Si ocurre un ataque, los equipos de desarrollo trabajarían bajo presión, forzando parches, por ejemplo.
++"Seguridad como auditoría tardía": Tratar la seguridad a último momento en el ciclo de desarrollo. Si ocurre un ataque, los equipos de desarrollo trabajarían bajo presión, forzando parches, por ejemplo.
 
-</span>
-</div>
+```
 
 
 #### 4.3 Principios y beneficios de DevOps (CI/CD, automatización, colaboración; Agile como precursor)

@@ -146,11 +146,19 @@ Politica de excepcion: caducidad: 3 dias, responsable: Ingeniero de Sistemas, pl
 
 **Revisión:** el KPI tiene número y ventana; la tabla muestra comprensión del impacto en usuarios.
 ```diff
-+ 4.5
++ Imagen insetada
++ Poner un limite de solicitudes para evitar los ataques DoS.
++ la tabla de riesgos vs mitigaciones:
+```
 
-+ CD: Realiza pruebas cortas de despliegue. Los fallos de rendimiento se arreglan más sofisticadamente.  
-
-+ El movimiento Agile promueve cambios frecuentes pero pequeños e incentiva la colaboración continua. Además, bloquea las pruebas o revisiones tardías que se podrían llegar a dar.
+| Riesgo                        | Mitigación                                 |
+|-------------------------------|--------------------------------------------|
+| Ataques DoS o de fuerza Bruta     | Rate limiting , limitando requests/hora a un IP|
+| Acceso no autorizado | RBAC(Role-Based Access Control): definiendo roles como admin, user,etc.       |
+| Fallo en despliegues          | health checks: para que el docker determine si es posible reiniciar    |
+```diff
++ El error 5xx indica que el estandar HTTP indica un error del servidor, por ejemplo, el error 500 "Internal server error", indica que el servidor no puede procesar la solicitud o encontro una condicion inesperada, y un umbral numerico seria 1.5% si el error rate es menor a este, entonces se promueve, y la ventana de observacion seria 10 minutos en decidir que hacer.
++ Las metricas error 5xx, latencia p95 deben de coexistir porque si esta lento el servicio(latencia p95), el usuario queda disconforme y no lo va a usar, y si el servicio esta caido(error 5xx), el usuario tampoco lo va a usar.
 ```
 #### 4.6 Fundamentos prácticos sin comandos (evidencia mínima)
 

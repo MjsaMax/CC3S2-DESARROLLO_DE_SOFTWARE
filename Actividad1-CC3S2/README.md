@@ -120,6 +120,18 @@ Al finalizar, deberías poder:
 
 **Validación:** que los umbrales sean **concretos** y la excepción tenga fecha límite y dueño.
 
+```diff
++ SAST (Static Application Security Testing): Es un análisis de seguridad que se realiza en el código fuente, sin ejecutarlo. Este se realiza en las primeras etapas del desarrollo y debido a su naturaleza em el pipeline, despues de la integración continua y antes que la compilacion sea exitosa. Mientras que DAST (Dynamic Application Security Testing): Es un análisis de seguridad que se realiza en una aplicación en ejecución. Este se realiza en las últimas etapas del desarrollo y debido a su naturaleza en el pipeline, despues de la compilacion y antes del despliegue a producción.[3]
++ Un gate minimo de seguridad sería que bloquea si no cumple los siguientes dos umbrales:
+1)El tiempo de respuesta de una api es menor a 2 segundos.
+Politica de excepcion: caducidad: 1 dia, responsable: Administrador de redes, plan de correccion: optimizar consultas a base de datos.
+2)La aplicación tiene 100 000 usuarios activos como limite.
+Politica de excepcion: caducidad: 3 dias, responsable: Ingeniero de Sistemas, plan de correccion: Identificar la causa y aplicar escalamiento temporal, ajustar límites de forma permanente antes de que caduque la excepción o solicitar un escalamiento de la infraestructura.
++Una señal de eficacia para evitar el "teatro de seguridad" sería:
+1)Reducción de hallazgos repetidos en SAST/DAST (métrica: ≤ 5% de vulnerabilidades recurrentes).
+2)Frecuencia de hallazgos de seguridad en código nuevo (métrica: reducción del 0.9% mensual).
+
+```
 #### 4.5 CI/CD y estrategias de despliegue (sandbox, canary, azul/verde)
 
 * Inserta una imagen del pipeline o canary en `imagenes/pipeline_canary.png`.
@@ -133,7 +145,13 @@ Al finalizar, deberías poder:
 * **Pregunta retadora:** si el KPI técnico se mantiene, pero cae una métrica de producto (conversión), explica por qué **ambos tipos de métricas** deben coexistir en el gate.
 
 **Revisión:** el KPI tiene número y ventana; la tabla muestra comprensión del impacto en usuarios.
+```diff
++ 4.5
 
++ CD: Realiza pruebas cortas de despliegue. Los fallos de rendimiento se arreglan más sofisticadamente.  
+
++ El movimiento Agile promueve cambios frecuentes pero pequeños e incentiva la colaboración continua. Además, bloquea las pruebas o revisiones tardías que se podrían llegar a dar.
+```
 #### 4.6 Fundamentos prácticos sin comandos (evidencia mínima)
 
 Realiza comprobaciones **con herramientas estándar**, pero **no** pegues los comandos. En el README escribe los **hallazgos** y la **interpretación**. Adjunta tus capturas en `imagenes/` y **marca** los campos relevantes (códigos, cabeceras, TTL, CN/SAN, fechas, puertos).
@@ -175,19 +193,37 @@ Realiza comprobaciones **con herramientas estándar**, pero **no** pegues los co
    * Para cada paso, indica: **objetivo**, **evidencia esperada**, **interpretación** y **acción siguiente**.
    * Evita generalidades; sé **operacional** (si X ocurre, entonces Y decisión).
 
+```diff
++ 4.6
 
++ CD: Realiza pruebas cortas de despliegue. Los fallos de rendimiento se arreglan más sofisticadamente.  
+
++ El movimiento Agile promueve cambios frecuentes pero pequeños e incentiva la colaboración continua. Además, bloquea las pruebas o revisiones tardías que se podrían llegar a dar.
+```
 #### 4.7 Desafíos de DevOps y mitigaciones
 
 * Inserta un diagrama propio o ilustración en `imagenes/desafios_devops.png` con **tres desafíos** anotados (culturales, técnicos, de gobernanza).
 * Enumera **tres riesgos** con su **mitigación concreta** (rollback, despliegues graduales, revisión cruzada, límites de "blast radius").
 * Diseña un **experimento controlado** para validar que el despliegue gradual reduce riesgo frente a uno "big-bang": define **métrica primaria**, **grupo control**, **criterio de éxito** y **plan de reversión**.
+```diff
++ 4.7
 
++ CD: Realiza pruebas cortas de despliegue. Los fallos de rendimiento se arreglan más sofisticadamente.  
+
++ El movimiento Agile promueve cambios frecuentes pero pequeños e incentiva la colaboración continua. Además, bloquea las pruebas o revisiones tardías que se podrían llegar a dar.
+```
 #### 4.8 Arquitectura mínima para DevSecOps (HTTP/DNS/TLS + 12-Factor)
 
 * Dibuja un **diagrama propio** en `imagenes/arquitectura-minima.png` con el flujo: **Cliente -> DNS -> Servicio (HTTP) -> TLS**, e indica **dónde** aplicar controles (políticas de caché, validación de certificados, contratos de API, límites de tasa).
 * Explica cómo cada capa contribuye a **despliegues seguros y reproducibles**.
 * Relaciona **dos principios 12-Factor** (config por entorno; logs a stdout) con **evidencias operativas** que un docente podría revisar (por ejemplo, diffs mínimos entre entornos, trazabilidad de logs).
+```diff
++ 4.8
 
++ CD: Realiza pruebas cortas de despliegue. Los fallos de rendimiento se arreglan más sofisticadamente.  
+
++ El movimiento Agile promueve cambios frecuentes pero pequeños e incentiva la colaboración continua. Además, bloquea las pruebas o revisiones tardías que se podrían llegar a dar.
+```
 
 #### 5) Evidencias que **deben aparecer** en tu README
 

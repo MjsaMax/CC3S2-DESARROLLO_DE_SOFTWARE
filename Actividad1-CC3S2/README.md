@@ -158,7 +158,7 @@ Politica de excepcion: caducidad: 3 dias, responsable: Ingeniero de Sistemas, pl
 | Fallo en despliegues          | health checks: para que el docker determine si es posible reiniciar    |
 ```diff
 + El error 5xx indica que el estandar HTTP indica un error del servidor, por ejemplo, el error 500 "Internal server error", indica que el servidor no puede procesar la solicitud o encontro una condicion inesperada, y un umbral numerico seria 1.5% si el error rate es menor a este, entonces se promueve, y la ventana de observacion seria 10 minutos en decidir que hacer.
-+ Las metricas error 5xx, latencia p95 deben de coexistir porque si esta lento el servicio(latencia p95), el usuario queda disconforme y no lo va a usar, y si el servicio esta caido(error 5xx), el usuario tampoco lo va a usar.
++ Las métricas error 5xx, latencia p95 deben de coexistir porque si esta lento el servicio(latencia p95), el usuario queda disconforme y no lo va a usar, y si el servicio esta caido(error 5xx), el usuario tampoco lo va a usar.
 ```
 #### 4.6 Fundamentos prácticos sin comandos (evidencia mínima)
 

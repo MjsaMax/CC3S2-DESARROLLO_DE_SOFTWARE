@@ -108,17 +108,13 @@ El problema no se adapta bien al cambio, debido a que, al no automatizar o no ex
 * Propón **un indicador observable** (no financiero) para medir mejora de colaboración Dev-Ops (por ejemplo, tiempo desde PR listo hasta despliegue en entorno de pruebas; proporción de rollbacks sin downtime).
 
 **Validez:** explica **cómo** recolectarías ese indicador sin herramientas pagas (bitácoras, metadatos de PRs, registros de despliegue).
-<div style="background-color:black; padding:10px; border-radius:5px;">
-<span style="color:white;">
-CI (Continuous Integration): El tamaño de los cambios es pequeño, debido a que se hacen varias veces al día en Pull Request. Las pruebas automatizadas también son cortas; si existe un error o conflicto, debe solucionarse desde ahí.  
+```diff
++ CI (Continuous Integration): El tamaño de los cambios es pequeño, debido a que se hacen varias veces al día en Pull Request. Las pruebas automatizadas también son cortas; si existe un error o conflicto, debe solucionarse desde ahí.  
 
-CD: Realiza pruebas cortas de despliegue. Los fallos de rendimiento se arreglan más sofisticadamente.  
++ CD: Realiza pruebas cortas de despliegue. Los fallos de rendimiento se arreglan más sofisticadamente.  
 
-El movimiento Agile promueve cambios frecuentes pero pequeños e incentiva la colaboración continua. Además, bloquea las pruebas o revisiones tardías que se podrían llegar a dar.
-
-</span>
-</div>
-
++ El movimiento Agile promueve cambios frecuentes pero pequeños e incentiva la colaboración continua. Además, bloquea las pruebas o revisiones tardías que se podrían llegar a dar.
+```
 #### 4.4 Evolución a DevSecOps (seguridad desde el inicio: SAST/DAST; cambio cultural)
 
 * Diferencia **SAST** (estático, temprano) y **DAST** (dinámico, en ejecución), y ubícalos en el pipeline.

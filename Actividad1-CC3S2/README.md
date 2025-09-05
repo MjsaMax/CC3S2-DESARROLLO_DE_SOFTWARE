@@ -221,11 +221,15 @@ Realiza comprobaciones **con herramientas estándar**, pero **no** pegues los co
    * Evita generalidades; sé **operacional** (si X ocurre, entonces Y decisión).
 
 ```diff
-+ 4.6
 
-+ CD: Realiza pruebas cortas de despliegue. Los fallos de rendimiento se arreglan más sofisticadamente.  
++ a) Puerto mal configurado/no expuesto 
 
-+ El movimiento Agile promueve cambios frecuentes pero pequeños e incentiva la colaboración continua. Además, bloquea las pruebas o revisiones tardías que se podrían llegar a dar.
++ b) Resolución DNS inconsistente 
+
++ c) Certificado TLS caducado/incorrecto 
+
++ d) Contrato HTTP roto 
+
 ```
 #### 4.7 Desafíos de DevOps y mitigaciones
 

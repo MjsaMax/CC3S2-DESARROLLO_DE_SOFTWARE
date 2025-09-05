@@ -170,30 +170,48 @@ Realiza comprobaciones **con herramientas estándar**, pero **no** pegues los co
    * Explica por qué esas cabeceras influyen en **rendimiento**, **caché** u **observabilidad**.
    * **Captura:** `imagenes/http-evidencia.png`, con los campos resaltados.
 
+```diff
++ Las cabeceras ETag influyen en el rendimiento porque, si el recurso no ha cambiado, el servidor responde 304 Not Modified sin enviar el cuerpo, reduciendo latencia y tráfico.
++ Vary influye en la caché porque indica qué cabeceras de solicitud generan respuestas distintas, el proxy almacena y sirve la variante correcta sin contactar el origen, aumentando los hits y disminuyendo el tiempo de descarga.
+```
+![HTTP Evidencia](imagenes/http-evidencia.png)
+
 2. **DNS - nombres y TTL**
 
    * Reporta: **tipo de registro** (A o CNAME) y **TTL** de un dominio.
    * Explica cómo el **TTL** afecta **rollbacks** y cambios de IP (propagación, ventanas de inconsistencia).
    * **Captura:** `imagenes/dns-ttl.png`, con el TTL destacado.
-
+```diff
++ Cuanto mas bajo el TTL, mas rapido se propagan los cambios y los rollbacks, cuanto mas alto es mas largo la ventana en la que parte del trafico va al sitio incorrecto.
+```
+![DNS Evidencia](imagenes/dns-ttl.png)
 3. **TLS - seguridad en tránsito**
 
    * Reporta: **CN/SAN**, **vigencia (desde/hasta)** y **emisora** del certificado de un sitio seguro.
    * Explica qué sucede si **no valida** la cadena (errores de confianza, riesgo de MITM, impacto en UX).
    * **Captura:** `imagenes/tls-cert.png`, con CN/SAN, emisora y fechas.
-
+```diff
++ Saltarse la validación hace que cualquier certificado falso parezca bueno: el navegador establece la conexión sin avisar, un atacante lee y altera todo el tráfico, y el usuario nunca se entera.
+```
+![TLS Evidencia](imagenes/tls-cert.png)
 4. **Puertos - estado de runtime**
 
    * Enumera **dos puertos en escucha** en tu máquina o entorno y **qué servicios** sugieren.
    * Explica cómo esta evidencia ayuda a detectar **despliegues incompletos** (puerto no expuesto) o **conflictos** (puerto ocupado).
    * **Captura:** `imagenes/puertos.png`, con los puertos resaltados.
-
+```diff
++ Las cabeceras ETag influyen en el rendimiento porque, si el recurso no ha cambiado, el servidor responde 304 Not Modified sin enviar el cuerpo, reduciendo latencia y tráfico.
++ Vary influye en la caché porque indica qué cabeceras de solicitud generan respuestas distintas, el proxy almacena y sirve la variante correcta sin contactar el origen, aumentando los hits y disminuyendo el tiempo de descarga.
+```
 5. **12-Factor - port binding, configuración, logs**
 
    * Describe **cómo** parametrizarías el puerto sin tocar código (config externa).
    * Indica **dónde** verías los logs en ejecución (flujo estándar) y **por qué** no deberías escribirlos en archivos locales rotados a mano.
    * Señala un **anti-patrón** (p. ej., credenciales en el código) y su impacto en reproducibilidad.
-
+```diff
++ Las cabeceras ETag influyen en el rendimiento porque, si el recurso no ha cambiado, el servidor responde 304 Not Modified sin enviar el cuerpo, reduciendo latencia y tráfico.
++ Vary influye en la caché porque indica qué cabeceras de solicitud generan respuestas distintas, el proxy almacena y sirve la variante correcta sin contactar el origen, aumentando los hits y disminuyendo el tiempo de descarga.
+```
 6. **Checklist de diagnóstico (incidente simulado)**
 
    * **Escenario:** usuarios reportan intermitencia. Formula un checklist de **seis pasos ordenados** que permita discriminar:

@@ -240,25 +240,31 @@ Objetivo: Cumplir esquema API documentado. Evidencia: Códigos 4xx/5xx o campos 
 * Enumera **tres riesgos** con su **mitigación concreta** (rollback, despliegues graduales, revisión cruzada, límites de "blast radius").
 * Diseña un **experimento controlado** para validar que el despliegue gradual reduce riesgo frente a uno "big-bang": define **métrica primaria**, **grupo control**, **criterio de éxito** y **plan de reversión**.
 ```diff
-+ 4.7
++Riesgo: nueva versión inestable
+Mitigación: rollback automático ante caída de métricas y prueba para activarse en <2 min. 
++Riesgo: fallo masivo al actualizar
+Mitigación: despliegue gradual canary y límites de “blast radius” por región y namespace.
++Riesgo: código defectuoso o inseguro
+Mitigación: revisión cruzada obligatoria y checklist automatizado.
 
-+ CD: Realiza pruebas cortas de despliegue. Los fallos de rendimiento se arreglan más sofisticadamente.  
-
-+ El movimiento Agile promueve cambios frecuentes pero pequeños e incentiva la colaboración continua. Además, bloquea las pruebas o revisiones tardías que se podrían llegar a dar.
++Experimento
+Métrica primaria: tasa de fallo de transacciones, es decir un error rate.
+Grupo control: 1 servicio critico con despliegue big-bang en cluster A.
+Grupo tratamiento: mismo servicio en cluster B con despliegue canary 5 % → 25 % → 50 % → 100 % durante 1 h por paso.
+Período: 1 semana, 20 lanzamientos diarios aleatorizados.
+Criterio de exito: error-rate en B ≥ 50 % menor que en A (p < 0,05).
+Plan de reversión: si en cualquier paso error-rate > umbral historico + 2 σ, rollback automático a versión anterior y análisis post-mortem.
 ```
+![Desafíos DevOps](imagenes/desafios_devops.png)
 #### 4.8 Arquitectura mínima para DevSecOps (HTTP/DNS/TLS + 12-Factor)
 
 * Dibuja un **diagrama propio** en `imagenes/arquitectura-minima.png` con el flujo: **Cliente -> DNS -> Servicio (HTTP) -> TLS**, e indica **dónde** aplicar controles (políticas de caché, validación de certificados, contratos de API, límites de tasa).
 * Explica cómo cada capa contribuye a **despliegues seguros y reproducibles**.
 * Relaciona **dos principios 12-Factor** (config por entorno; logs a stdout) con **evidencias operativas** que un docente podría revisar (por ejemplo, diffs mínimos entre entornos, trazabilidad de logs).
 ```diff
-+ 4.8
-
-+ CD: Realiza pruebas cortas de despliegue. Los fallos de rendimiento se arreglan más sofisticadamente.  
-
-+ El movimiento Agile promueve cambios frecuentes pero pequeños e incentiva la colaboración continua. Además, bloquea las pruebas o revisiones tardías que se podrían llegar a dar.
++Dos principios 12-factor son config por entorno y logs a stdout, estos se relacionan con evidencias operativas como diffs minimos entre entornos y trazabilidad de logs, aparte tambien se relacionan con aportar la misma traza request-id en staging y prod, ver solo variables cambiar entre ramas y encontrar en stdout métricas por puerto que distinguen workers sin mezclar líneas.
 ```
-
+![Arquitectura Mínima](imagenes/arquitectura-minima.png)
 #### 5) Evidencias que **deben aparecer** en tu README
 
 * Capturas con **marcas visuales** (flechas, recuadros) sobre:

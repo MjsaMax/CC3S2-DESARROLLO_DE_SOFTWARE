@@ -10,3 +10,5 @@
 #### https://www.fbcinc.com/source/virtualhall_images/NLIT_June_21/Eggplant/The_Ultimate_DevOps_Playbook.pdf
 #### https://www.bcs.org/media/cntdif0o/291123-devops-and-devsecops-fundamentals.pdf
 #### https://www.thoughtrock.com/wp-content/uploads/2020/09/DevOpsFundamentalsStudyGuideSAMPLE.pdf
+#### https://www.deployhq.com/blog/what-is-the-twelve-factor-app-methodology
+#### https://www.cloudflare.com/en-gb/learning/dns/dns-over-tls/

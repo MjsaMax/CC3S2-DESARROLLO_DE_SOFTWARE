@@ -222,13 +222,16 @@ Realiza comprobaciones **con herramientas estándar**, pero **no** pegues los co
 
 ```diff
 
-+ a) Puerto mal configurado/no expuesto 
 
-+ b) Resolución DNS inconsistente 
++a) Puerto mal configurado/no expuesto
+Objetivo: Verificar puerto correcto y accesible. Evidencia: Conexion rechazada. Interpretación: Servicio no escucha o firewall bloquea. Acción: Revisar bind y reglas firewall.
++b) Resolución DNS inconsistente
+Objetivo: Asegurar resolución uniforme. Evidencia: Respuestas distintas por ubicación. Interpretación: Entradas desactualizadas o CDN mal configurado. Acción: Unificar registros y purgar cachés.
++c) Certificado TLS caducado/incorrecto
+Objetivo: Validar certificado vigente y confiable. Evidencia: Navegador alerta caducidad o nombre no coincide. Interpretación: Renovación fallida o CN erróneo. Acción: Renovar o reemitir certificado.
++d) Contrato HTTP roto
+Objetivo: Cumplir esquema API documentado. Evidencia: Códigos 4xx/5xx o campos faltantes. Interpretación: Cambios sin versionar. Acción: Corregir endpoint o actualizar documentación y clientes.
 
-+ c) Certificado TLS caducado/incorrecto 
-
-+ d) Contrato HTTP roto 
 
 ```
 #### 4.7 Desafíos de DevOps y mitigaciones

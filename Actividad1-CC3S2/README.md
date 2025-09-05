@@ -200,17 +200,18 @@ Realiza comprobaciones **con herramientas estándar**, pero **no** pegues los co
    * Explica cómo esta evidencia ayuda a detectar **despliegues incompletos** (puerto no expuesto) o **conflictos** (puerto ocupado).
    * **Captura:** `imagenes/puertos.png`, con los puertos resaltados.
 ```diff
-+ Las cabeceras ETag influyen en el rendimiento porque, si el recurso no ha cambiado, el servidor responde 304 Not Modified sin enviar el cuerpo, reduciendo latencia y tráfico.
-+ Vary influye en la caché porque indica qué cabeceras de solicitud generan respuestas distintas, el proxy almacena y sirve la variante correcta sin contactar el origen, aumentando los hits y disminuyendo el tiempo de descarga.
++ Al ver que puertos estan ocupados al momento de desplegar, es decir, puedo darme cuenta que puertos ando utilizando con que proceso y que puertos estan libres para usar.
 ```
+![Puertos Evidencia](imagenes/puertos.png)
 5. **12-Factor - port binding, configuración, logs**
 
    * Describe **cómo** parametrizarías el puerto sin tocar código (config externa).
    * Indica **dónde** verías los logs en ejecución (flujo estándar) y **por qué** no deberías escribirlos en archivos locales rotados a mano.
    * Señala un **anti-patrón** (p. ej., credenciales en el código) y su impacto en reproducibilidad.
 ```diff
-+ Las cabeceras ETag influyen en el rendimiento porque, si el recurso no ha cambiado, el servidor responde 304 Not Modified sin enviar el cuerpo, reduciendo latencia y tráfico.
-+ Vary influye en la caché porque indica qué cabeceras de solicitud generan respuestas distintas, el proxy almacena y sirve la variante correcta sin contactar el origen, aumentando los hits y disminuyendo el tiempo de descarga.
++ Docker mapea puertos externos a internos sin cambiar código:  `docker run -p 8080:3000 app` expone puerto 8080 externamente mientras la aplicación usa puerto 3000 internamente.
++ Logs se ven en consola y son capturados por orquestadores como Docker o Kubernetes. Evitar archivos locales porque no escalan y porque requieren gestion manual.
++ Dependencias sin versionar, ya que no son reproducibles entre distintos entornos.
 ```
 6. **Checklist de diagnóstico (incidente simulado)**
 

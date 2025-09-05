@@ -1,7 +1,7 @@
 #  Actividad1-CC3S2
 #### Creado por Serrano Arostegui Max Jairo
-## Fecha y tiempo total invertido: 
-## Entorno:
+## Fecha y tiempo total invertido: 10 h
+## Entorno: Visual studio code, git bash, navegador web google.
 
 # Actividad1-CC3S2
 ### Actividad 1: introducción devops, devsecops 

@@ -1,3 +1,25 @@
-# Genera este archivo con: git log --oneline --graph --decorate --all
-# cambio1
-# cambio2
+* bd2b0a3 (HEAD -> main, feature/msg) cambio2
+* d0e8b16 commit en feature/msg cambio2
+* fd7378a commit en feature/msg
+* 3bf4168 2.2 Prueba de Entrada Realizado
+* 77ab77e (origin/main, origin/HEAD) Día 3-Evidencia, diagramas y entrega final corregido
+* c0951bc Día 3-Evidencia, diagramas y entrega final
+* 3554867 imagen agregada
+* b6e8480 lista
+* 491e88f Recopilacion de fuentes
+* 620f850 4.5.6
+* b848034 4.6.5 realizado
+* 98f8f41 4.6.1 al 4.6.3
+* 4a98f99 Agregar imagen de http_evidencia
+* 0fd6d41 Día 2-DevSecOps y estrategia de despliegue
+* dda2237 desarrollo 4.5
+* e310fdc imagen de cicd y canary
+* 172311b 4.4 realizado
+* 76f4c51 Update README.md
+* 5d66d12 Update README.md
+* 0c31fe8 Update README.md
+* 926ad6b Update README.md
+* d03fd3c Update README.md
+* efb2e27 Día 1-Comparativos e imágenes base
+* b51e8dc creacion fuente 2
+* 5c4820c imagen silos-equipos agregado

@@ -38,18 +38,34 @@ Bash con `set -euo pipefail` + `trap`. Genera:
 - `dns.txt`: `dig A/AAAA/MX example.com +noall +answer` + comenta el **TTL**. (1.5)  
 - `tls.txt`: versión TLS observada (`curl -Iv` u `openssl s_client`). (0.5)  
 - `sockets.txt`: `ss -tuln` + 1-2 riesgos de puertos abiertos. (0.5)
+```diff
 
++ Realizado
+
+```
 **1.2 Makefile (2 pts)**  
 Targets: `help`, `tools` (verifica git/bash/make/python3/pytest/curl/dig/ss/jq), `report`, `all`. Idempotente.
+```diff
 
++ Realizado
+
+```
 #### Sección 2-Python + Tests y Git (8 pts)
 
 **2.1 Función + CLI (3 pts)**  
 `app/app.py`: `summarize(nums)` -> `{"count","sum","avg"}` con validación; CLI `python -m app "1,2,3"`.
+```diff
 
++ Realizado
+
+```
 **2.2 Pytest + cobertura (3 pts)**  
 `tests/test_app.py`: 3 tests (normal, borde, error) con fixture; guardar cobertura en `coverage.txt` (meta ~ 70%).
+```diff
 
++ Realizado
+
+```
 **2.3 Flujo Git (2 pts)**  
 Ramas (`feature/msg`), **merge FF**, **cherry-pick** de fix y **rebase** corto. Guarda `git_log.txt` y explica en README (4-6 líneas) FF vs rebase vs cherry-pick.
 ```diff
@@ -64,6 +80,11 @@ Ramas (`feature/msg`), **merge FF**, **cherry-pick** de fix y **rebase** corto. 
 
 **3.1 GET y DNS (2 pts)**  
 `curl https://example.com -o example.html` (1) y `dig google.com ANY +noall +answer > dig_output.txt` con breve explicación en `network_answers.txt` (TTL/qué muestra `dig`) (1).
+```diff
+
++ Realizado
+
+```
 
 **3.2 API + `jq` (2 pts)**  
 `curl https://jsonplaceholder.typicode.com/posts/1 -s -o api_response.json`; extraer `title` con `jq -r '.title' > api_title.txt`. En README, indicar el header de tipo de contenido (**Content-Type**).
@@ -77,7 +98,11 @@ Ramas (`feature/msg`), **merge FF**, **cherry-pick** de fix y **rebase** corto. 
 **3.3 Conceptos y pipeline (2 pts)**  
 En `network_answers.txt` (~150 palabras): ¿qué es HTTP?, 80 vs 443, por qué TLS.  
 En `deploy_scenario.txt` (~200 palabras): flujo mínimo "código -> pruebas -> despliegue" y una herramienta por paso.
+```diff
 
++ Realizado
+
+```
 #### Rúbrica resumida (20 pts)
 
 - **S1 (6):** `syscheck.sh` correcto y evidencias (4). Makefile e idempotencia (2).  

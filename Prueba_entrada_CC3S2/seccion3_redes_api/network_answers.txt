@@ -1,0 +1,18 @@
+Debido a que:
+
+    dig google.com ANY +noall +answer > dig_output.txt
+
+No sale nada, por cuestiones de seguridad por ataques de DoS u similares.
+Se ha relizado solo con la solicitud de servidores IPv4 (A) para google.com:
+
+    dig google.com A +noall +answer > dig_output.txt
+
+El resultado esta adjunto en dig_output. 
+Y el TTL es 125 segundos.
+
+# 3.3 Conceptos y pipeline
+¿qué es HTTP?, 80 vs 443, por qué TLS.
+HTTP es un protocolo de transferencia de hypertexto en el que los clientes solicitan recursos a servidores por medio del puerto 80
+este protocolo usualmente usa los puertos de red 80 y 443 de un dispositivo
+el puerto 80 es para el uso del HTTP y el 443 para el uso de HTTPS que es seguro (HTTP + TLS)
+TLS es un protocolo de encriptacion para comunicaciones seguras atraves de la RED , usualmente usa el puerto 443.

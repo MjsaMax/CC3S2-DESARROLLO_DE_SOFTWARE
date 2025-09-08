@@ -1,0 +1,6 @@
+google.com.		125	IN	A	108.177.123.101
+google.com.		125	IN	A	108.177.123.100
+google.com.		125	IN	A	108.177.123.139
+google.com.		125	IN	A	108.177.123.113
+google.com.		125	IN	A	108.177.123.102
+google.com.		125	IN	A	108.177.123.138

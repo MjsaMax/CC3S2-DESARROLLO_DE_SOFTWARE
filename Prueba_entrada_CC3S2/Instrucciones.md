@@ -68,6 +68,12 @@ Ramas (`feature/msg`), **merge FF**, **cherry-pick** de fix y **rebase** corto. 
 **3.2 API + `jq` (2 pts)**  
 `curl https://jsonplaceholder.typicode.com/posts/1 -s -o api_response.json`; extraer `title` con `jq -r '.title' > api_title.txt`. En README, indicar el header de tipo de contenido (**Content-Type**).
 
+```diff
++ El tipo de contenido se halla con curl -I <URL>
+ lo que me muestra en una linea: "content-type: application/json; charset=utf-8"
+ que es de tipo JSON
+```
+
 **3.3 Conceptos y pipeline (2 pts)**  
 En `network_answers.txt` (~150 palabras): ¿qué es HTTP?, 80 vs 443, por qué TLS.  
 En `deploy_scenario.txt` (~200 palabras): flujo mínimo "código -> pruebas -> despliegue" y una herramienta por paso.

@@ -1,0 +1,9 @@
+El flujo de codigo: 
+Este esta representado desde la idea base de crear algoritmos para satisfacer los Casos de Uso
+del cliente, este es trabajado por un entorno de desarrollo usado por el (Developer) (IDE) como podria ser NetBeans,
+pycharm o Visual Studio.Ademas con un uso correcto de GIT para el versionamiento del software es posible que se acelere el flujo de desarrollo.
+El flujo de pruebas:
+Una vez desarrollado codigo se implementaran restricciones de salidas o testeos de muestras automatizadas para evitar posibles errores
+en el despliegue, una herramiento es el que se uso en esta Prueba de Entrada es Pytest que es usado para python y existe Junit para java.
+El flujo de despliegue:
+Una vez que se tiene listo el software se envia el codigo o repositorio a un entorno de produccion que podria ser docker o a un servidor web dependiendo de las necesidades.

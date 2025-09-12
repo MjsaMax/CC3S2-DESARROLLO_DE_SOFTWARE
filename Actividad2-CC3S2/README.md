@@ -27,12 +27,30 @@ Sube una carpeta **`Actividad2-CC3S2/`** con:
 
    * `curl -v http://127.0.0.1:8080/` (cabeceras, código de estado, cuerpo JSON).
    * `curl -i -X POST http://127.0.0.1:8080/` (explica qué ocurre si no hay ruta/método).
+
+   ```diff
+   + Me devuelve "HTTP/1.1 405 METHOD NOT ALLOWED" lo que indica que no hay ruta porque no define POST, el error es 405
+   ```
    * **Pregunta guía:** ¿Qué campos de respuesta cambian si actualizas `MESSAGE`/`RELEASE` sin reiniciar el proceso? Explica por qué.
+
+  ```diff
+   + Ningun cambio como muestra la siguente imagen
+   ```
+   ![Texto alternativo](evidencias/imagenes/REALEASEsinreiniciarproceso.png)
+
 4. **Puertos abiertos con `ss`:**
 
    * `ss -ltnp | grep :8080` (evidencia del proceso y socket).
-5. **Logs como flujo:** Demuestra que los logs salen por stdout (pega 2–3 líneas). Explica por qué **no** se escriben en archivo (12-Factor).
+    ```diff
+    + El proceso es python3 y el socket es 127.0.0.1:8080
+    ```
 
+   ![texto](evidencias/imagenes/PuertosAbiertos.png)
+5. **Logs como flujo:** Demuestra que los logs salen por stdout (pega 2–3 líneas). Explica por qué **no** se escriben en archivo (12-Factor).
+    ```diff
+    + No se escriben el archivo por que 12-factor recomienda que lo logs pasen por stdout (standar out)
+    ```
+![text](evidencias/imagenes/2-3Lineas.png)
 > Herramientas: `curl`, `ss`, `lsof` (opcional para PID/FD), `journalctl` (si corres como servicio).
 
 

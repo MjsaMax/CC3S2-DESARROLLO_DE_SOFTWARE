@@ -1,0 +1,6 @@
+○ miapp.service - CC3S2 Flask App (miapp)
+     Loaded: bad-setting (Reason: Unit miapp.service has a bad unit file setting.)
+     Active: inactive (dead)
+
+Sep 12 17:03:35 DESKTOP-QMPB3M9 systemd[1]: /etc/systemd/system/miapp.service:8: WorkingDirectory= path is not absolute: ${APP_DIR}
+Sep 12 17:03:35 DESKTOP-QMPB3M9 systemd[1]: miapp.service: Unit configuration has fatal error, unit will not be started.

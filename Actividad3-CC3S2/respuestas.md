@@ -5,6 +5,10 @@
 
    * *Tip:* Piensa en ejemplos concretos: ¿cómo se vería un gate de calidad en tu Makefile?
 
+   ```
+   DevOps es el conjunto de constumbres en las que deben desarrollar en equipo, el area de Delopment y de Operaciones, ambos compartiendo los mismos objetivos, su flujo va desde codigo, pruebas, integracion continua,despliegue a monitoreo de este,.A diferencia de waterfall este administra un flujo mas dinamico, conteniendo asi mayor cantidad de iteraciones para desarrollar el producto, mientras que waterfall, beneficiado de objetivos concretos, tiende a pasar de un proceso a otro solo una vez por proyecto.
+   ```
+
 2. **Marco CALMS en acción:**
    Describe cada pilar y su integración en el laboratorio (ej. Automation con Makefile, Measurement con endpoints de salud). Propón extender Sharing con runbooks/postmortems en equipo.
 

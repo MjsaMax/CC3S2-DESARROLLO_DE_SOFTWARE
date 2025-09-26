@@ -1,4 +1,4 @@
 def greet():
-    print('Hello World-actualizado en main')
+    print('Hello como una función avanzada')
 
 greet()

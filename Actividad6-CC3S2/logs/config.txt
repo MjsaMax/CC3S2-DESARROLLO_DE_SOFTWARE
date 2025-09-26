@@ -1,0 +1,12 @@
+ax--@DESKTOP:~/CC3S2-DESARROLLO_DE_SOFTWARE/Actividad6-CC3S2$ git config --list
+user.email=CorreoMax@gmail.com
+user.name=NOMBREMax
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=git@github.com:MjsaMax/CC3S2-DESARROLLO_DE_SOFTWARE.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.main.remote=origin
+branch.main.merge=refs/heads/main
+branch.main.vscode-merge-base=origin/main

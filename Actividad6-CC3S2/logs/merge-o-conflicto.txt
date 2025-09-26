@@ -1,0 +1,14 @@
+# No hay conflicto pero se colocará uno que salio anteriormente al realizar los ejrcicios de la actual Actividad6
+ax--@DESKTOP:~/CC3S2-DESARROLLO_DE_SOFTWARE$ git merge feature/advanced-feature 
+Auto-merging main.py
+CONFLICT (add/add): Merge conflict in main.py
+Automatic merge failed; fix conflicts and then commit the result.
+ax--@DESKTOP:~/CC3S2-DESARROLLO_DE_SOFTWARE$ # Existe conflicto, por lo tanto se resolvera a continuacion:
+ax--@DESKTOP:~/CC3S2-DESARROLLO_DE_SOFTWARE$ ls
+Actividad1-CC3S2  Actividad2-CC3S2  Actividad3-CC3S2  Actividad4-CC3S2  Actividad5-CC3S2  Actividad6-CC3S2  Prueba_entrada_CC3S2  README.md  main.py
+ax--@DESKTOP:~/CC3S2-DESARROLLO_DE_SOFTWARE$ git add main.py
+ax--@DESKTOP:~/CC3S2-DESARROLLO_DE_SOFTWARE$ git commit -m "Resuelve el conflicto de fusión entre la versión main y feature/advanced-feature"
+[main 88f2161] Resuelve el conflicto de fusión entre la versión main y feature/advanced-feature
+ax--@DESKTOP:~/CC3S2-DESARROLLO_DE_SOFTWARE$ git branch -d feature/advanced-feature 
+Deleted branch feature/advanced-feature (was fb044f1).
+ax--@DESKTOP:~/CC3S2-DESARROLLO_DE_SOFTWARE$ # Se ha eliminado la rama advanced-feature

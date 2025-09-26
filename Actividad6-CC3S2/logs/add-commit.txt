@@ -1,0 +1,5 @@
+ax--@DESKTOP:~/CC3S2-DESARROLLO_DE_SOFTWARE/Actividad6-CC3S2$ git add logs/init-status.txt 
+ax--@DESKTOP:~/CC3S2-DESARROLLO_DE_SOFTWARE/Actividad6-CC3S2$ git commit -m "Muestra salida de git init y git status" 
+[master (root-commit) caa6f90] Muestra salida de git init y git status
+ 1 file changed, 13 insertions(+)
+ create mode 100644 logs/init-status.txt

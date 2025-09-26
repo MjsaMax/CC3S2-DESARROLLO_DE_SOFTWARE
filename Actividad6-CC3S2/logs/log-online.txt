@@ -1,0 +1,2 @@
+ax--@DESKTOP:~/CC3S2-DESARROLLO_DE_SOFTWARE/Actividad6-CC3S2$ git log --oneline
+caa6f90 (HEAD -> master) Muestra salida de git init y git status

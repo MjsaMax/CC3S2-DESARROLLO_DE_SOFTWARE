@@ -1,19 +1,19 @@
 A
-example.com.		56	IN	A	23.192.228.84
-example.com.		56	IN	A	23.220.75.232
-example.com.		56	IN	A	23.215.0.136
-example.com.		56	IN	A	23.220.75.245
-example.com.		56	IN	A	23.215.0.138
-example.com.		56	IN	A	23.192.228.80
+example.com.		121	IN	A	23.192.228.84
+example.com.		121	IN	A	23.220.75.245
+example.com.		121	IN	A	23.192.228.80
+example.com.		121	IN	A	23.220.75.232
+example.com.		121	IN	A	23.215.0.136
+example.com.		121	IN	A	23.215.0.138
 AAAA
-example.com.		87	IN	AAAA	2600:1406:5e00:6::17ce:bc1b
-example.com.		87	IN	AAAA	2600:1406:bc00:53::b81e:94c8
-example.com.		87	IN	AAAA	2600:1408:ec00:36::1736:7f24
-example.com.		87	IN	AAAA	2600:1408:ec00:36::1736:7f31
-example.com.		87	IN	AAAA	2600:1406:5e00:6::17ce:bc12
-example.com.		87	IN	AAAA	2600:1406:bc00:53::b81e:94ce
+example.com.		270	IN	AAAA	2600:1406:bc00:53::b81e:94ce
+example.com.		270	IN	AAAA	2600:1408:ec00:36::1736:7f31
+example.com.		270	IN	AAAA	2600:1408:ec00:36::1736:7f24
+example.com.		270	IN	AAAA	2600:1406:bc00:53::b81e:94c8
+example.com.		270	IN	AAAA	2600:1406:5e00:6::17ce:bc12
+example.com.		270	IN	AAAA	2600:1406:5e00:6::17ce:bc1b
 MX
-example.com.		19264	IN	MX	0 .
+example.com.		5981	IN	MX	0 .
 
 Nota (editar): TimeToLive, TTL alto vs bajo impacta en la velocidad de la pagina web, ya que si es bajo sera mas fluido el uso del servidor ya que el cache esta mas tiempo 
 mientras que con TTL bajo, ofrece mayor dinammismo del DNS y en la resolucion de nombres

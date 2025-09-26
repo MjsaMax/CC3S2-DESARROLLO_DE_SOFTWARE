@@ -18,10 +18,17 @@ Pregunta: ¿Cual es la salida de este comando?
 
 #### Preguntas
 
-- ¿Cómo te ha ayudado Git a mantener un historial claro y organizado de tus cambios?  
+- ¿Cómo te ha ayudado Git a mantener un historial claro y organizado de tus cambios? 
+
+```
++ Ahora se puede hacer seguimiento del historial de cambios de todas las modificaciones que hice, facilita y acelera tanto en la organización como en la colaboración en el tiempo de vida del software.
+```
 - ¿Qué beneficios ves en el uso de ramas para desarrollar nuevas características o corregir errores?  
-- Realiza una revisión final del historial de commits para asegurarte de que todos los cambios se han registrado correctamente.  
-- Revisa el uso de ramas y merges para ver cómo Git maneja múltiples líneas de desarrollo.
+
+```
++ Mayor claridad en la trazabilidad de los cambios e incorporacion robusta de cualquier funcionalidad nueva.
+```
+
 
 #### Ejercicios
 

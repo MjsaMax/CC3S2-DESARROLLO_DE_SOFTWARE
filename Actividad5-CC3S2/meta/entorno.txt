@@ -1,0 +1,16 @@
+Linux DESKTOP-QMPB3M9 6.6.87.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+Python 3.12.3
+pip 24.0 from /usr/lib/python3/dist-packages/pip (python 3.12)
+GNU Make 4.3
+GNU bash, version 5.2.21(1)-release (x86_64-pc-linux-gnu)
+ShellCheck - shell script analysis tool
+version: 0.9.0
+license: GNU General Public License, version 3
+website: https://www.shellcheck.net
+3.8.0
+ruff 0.13.1
+git version 2.43.0
+tar (GNU tar) 1.35
+sha256sum (GNU coreutils) 9.4
+grep (GNU grep) 3.11
+GNU Awk 5.2.1, API 3.2, PMA Avon 8-g1, (GNU MPFR 4.2.1, GNU MP 6.3.0)

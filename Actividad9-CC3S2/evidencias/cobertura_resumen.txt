@@ -1,0 +1,71 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.3, pluggy-1.6.0
+Test order randomisation NOT enabled. Enable with --random-order or --random-order-bucket=<bucket_type>
+rootdir: /home/ax--/CC3S2-DESARROLLO_DE_SOFTWARE/Actividad9-CC3S2/soluciones/coverage_pruebas
+plugins: random-order-1.2.0, Faker-37.8.0, cov-5.0.0
+collected 12 items
+
+tests/test_account.py ............                                       [100%]
+
+=============================== warnings summary ===============================
+../../../../.venv/lib/python3.12/site-packages/sqlalchemy/sql/sqltypes.py:2061
+  /home/ax--/.venv/lib/python3.12/site-packages/sqlalchemy/sql/sqltypes.py:2061: DeprecationWarning: datetime.datetime.utcfromtimestamp() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.fromtimestamp(timestamp, datetime.UTC).
+    epoch = dt.datetime.utcfromtimestamp(0)
+
+../../../../.venv/lib/python3.12/site-packages/werkzeug/routing.py:1015
+../../../../.venv/lib/python3.12/site-packages/werkzeug/routing.py:1015
+../../../../.venv/lib/python3.12/site-packages/werkzeug/routing.py:1015
+  /home/ax--/.venv/lib/python3.12/site-packages/werkzeug/routing.py:1015: DeprecationWarning: ast.Str is deprecated and will be removed in Python 3.14; use ast.Constant instead
+    parts = parts or [ast.Str("")]
+
+../../../../.venv/lib/python3.12/site-packages/werkzeug/routing.py:1012
+../../../../.venv/lib/python3.12/site-packages/werkzeug/routing.py:1012
+../../../../.venv/lib/python3.12/site-packages/werkzeug/routing.py:1012
+../../../../.venv/lib/python3.12/site-packages/werkzeug/routing.py:1012
+../../../../.venv/lib/python3.12/site-packages/werkzeug/routing.py:1012
+../../../../.venv/lib/python3.12/site-packages/werkzeug/routing.py:1012
+  /home/ax--/.venv/lib/python3.12/site-packages/werkzeug/routing.py:1012: DeprecationWarning: ast.Str is deprecated and will be removed in Python 3.14; use ast.Constant instead
+    _convert(elem) if is_dynamic else ast.Str(s=elem)
+
+../../../../../../usr/lib/python3.12/ast.py:587
+../../../../../../usr/lib/python3.12/ast.py:587
+../../../../../../usr/lib/python3.12/ast.py:587
+../../../../../../usr/lib/python3.12/ast.py:587
+../../../../../../usr/lib/python3.12/ast.py:587
+../../../../../../usr/lib/python3.12/ast.py:587
+  /usr/lib/python3.12/ast.py:587: DeprecationWarning: Attribute s is deprecated and will be removed in Python 3.14; use value instead
+    return Constant(*args, **kwargs)
+
+../../../../.venv/lib/python3.12/site-packages/werkzeug/routing.py:1019: 10 warnings
+  /home/ax--/.venv/lib/python3.12/site-packages/werkzeug/routing.py:1019: DeprecationWarning: ast.Str is deprecated and will be removed in Python 3.14; use ast.Constant instead
+    if isinstance(p, ast.Str) and isinstance(ret[-1], ast.Str):
+
+../../../../.venv/lib/python3.12/site-packages/werkzeug/routing.py:1020
+../../../../.venv/lib/python3.12/site-packages/werkzeug/routing.py:1020
+../../../../.venv/lib/python3.12/site-packages/werkzeug/routing.py:1020
+../../../../.venv/lib/python3.12/site-packages/werkzeug/routing.py:1020
+../../../../.venv/lib/python3.12/site-packages/werkzeug/routing.py:1020
+../../../../.venv/lib/python3.12/site-packages/werkzeug/routing.py:1020
+../../../../.venv/lib/python3.12/site-packages/werkzeug/routing.py:1020
+../../../../.venv/lib/python3.12/site-packages/werkzeug/routing.py:1020
+  /home/ax--/.venv/lib/python3.12/site-packages/werkzeug/routing.py:1020: DeprecationWarning: Attribute s is deprecated and will be removed in Python 3.14; use value instead
+    ret[-1] = ast.Str(ret[-1].s + p.s)
+
+../../../../.venv/lib/python3.12/site-packages/werkzeug/routing.py:1020
+../../../../.venv/lib/python3.12/site-packages/werkzeug/routing.py:1020
+../../../../.venv/lib/python3.12/site-packages/werkzeug/routing.py:1020
+../../../../.venv/lib/python3.12/site-packages/werkzeug/routing.py:1020
+  /home/ax--/.venv/lib/python3.12/site-packages/werkzeug/routing.py:1020: DeprecationWarning: ast.Str is deprecated and will be removed in Python 3.14; use ast.Constant instead
+    ret[-1] = ast.Str(ret[-1].s + p.s)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+
+---------- coverage: platform linux, python 3.12.3-final-0 -----------
+Name                 Stmts   Miss  Cover   Missing
+--------------------------------------------------
+models/__init__.py       9      0   100%
+models/account.py       47      0   100%
+--------------------------------------------------
+TOTAL                   56      0   100%
+
+======================= 12 passed, 38 warnings in 1.27s ========================

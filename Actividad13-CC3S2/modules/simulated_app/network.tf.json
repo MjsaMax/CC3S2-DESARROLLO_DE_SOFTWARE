@@ -5,7 +5,7 @@
                 {
                     "type": "string",
                     "default": "cambioPorFase3",
-                    "description": "Nombre del servidor local"
+                    "description": "Nombre del servidor local modificado"
                 }
             ]
         },
@@ -14,7 +14,7 @@
                 {
                     "type": "string",
                     "default": "lab-net",
-                    "description": "Nombre de la red local"
+                    "description": "Nombre de la red local modificado"
                 }
             ]
         }

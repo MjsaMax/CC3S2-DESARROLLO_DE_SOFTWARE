@@ -3,20 +3,36 @@
         {
             "name": [
                 {
-                    "type": "string",
-                    "default": "hello-world",
-                    "description": "Nombre del servidor local"
+                    "default": "cambioPorFase3",
+                    "description": "Nombre del servidor local modificado",
+                    "type": "string"
                 }
             ]
         },
         {
             "network": [
                 {
-                    "type": "string",
                     "default": "lab-net",
-                    "description": "Nombre de la red local"
+                    "description": "Nombre de la red local modificado",
+                    "type": "string"
                 }
             ]
+        },
+        {
+            "port": [
+                {
+                    "default": 8080,
+                    "description": "Puerto asignado al servidor local",
+                    "type": "number"
+                }
+            ]
+        },
+        {
+            "api_key": {
+                "description": "Clave API sensible para el entorno",
+                "sensitive": true,
+                "type": "string"
+            }
         }
     ]
 }

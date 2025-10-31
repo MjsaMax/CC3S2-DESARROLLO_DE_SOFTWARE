@@ -1,22 +1,31 @@
 {
-    "variable": [
+  "variable": [
+    {
+      "name": [
         {
-            "name": [
-                {
-                    "type": "string",
-                    "default": "cambioPorFase3",
-                    "description": "Nombre del servidor local modificado"
-                }
-            ]
-        },
-        {
-            "network": [
-                {
-                    "type": "string",
-                    "default": "lab-net",
-                    "description": "Nombre de la red local modificado"
-                }
-            ]
+          "type": "string",
+          "default": "cambioPorFase3",
+          "description": "Nombre del servidor local modificado"
         }
-    ]
+      ]
+    },
+    {
+      "network": [
+        {
+          "type": "string",
+          "default": "lab-net",
+          "description": "Nombre de la red local modificado"
+        }
+      ]
+    },
+    {
+      "port": [
+          {
+              "type": "number",
+              "default": 8080,
+              "description": "Puerto asignado al servidor local"
+          }
+      ]
+    }
+  ]
 }

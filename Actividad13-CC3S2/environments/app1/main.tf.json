@@ -1,14 +1,14 @@
 {
     "resource": [
         {
-            "null_resource": [
+            "local_server": [
                 {
                     "app1": [
                         {
                             "provisioner": [
                                 {
                                     "local-exec": {
-                                        "command": "echo 'Arrancando servidor app1 en red net1'"
+                                        "command": "echo \"Arrancando 8080\""
                                     }
                                 }
                             ],

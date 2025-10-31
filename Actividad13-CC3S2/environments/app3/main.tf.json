@@ -1,20 +1,20 @@
 {
     "resource": [
         {
-            "null_resource": [
+            "local_server": [
                 {
                     "app3": [
                         {
                             "provisioner": [
                                 {
                                     "local-exec": {
-                                        "command": "echo 'Arrancando servidor app3 en red net3'"
+                                        "command": "echo \"Arrancando 8080\""
                                     }
                                 }
                             ],
                             "triggers": {
                                 "name": "app3",
-                                "network": "net3"
+                                "network": "net2-peered"
                             }
                         }
                     ]

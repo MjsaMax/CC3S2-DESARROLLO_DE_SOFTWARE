@@ -1,0 +1,57 @@
+{
+  "module": {
+    "network": {
+      "source": "./modules/network"
+    },
+    "app": {
+      "source": "./modules/app"
+    }
+  },
+  "resource": {
+    "null_resource": {
+      "app": {
+        "triggers": {
+          "factory_uuid": "40121744-a07f-416b-b78d-f3a020745682",
+          "timestamp": "2025-11-01T00:09:05.272324",
+          "welcome": "\u00a1Hola!"
+        }
+      },
+      "network_0": {
+        "triggers": {
+          "factory_uuid": "42f62f38-dfe8-4f11-8f4d-0adfd9c221a7",
+          "timestamp": "2025-11-01T00:09:05.272384"
+        }
+      },
+      "network_1": {
+        "triggers": {
+          "factory_uuid": "42f62f38-dfe8-4f11-8f4d-0adfd9c221a7",
+          "timestamp": "2025-11-01T00:09:05.272384"
+        }
+      },
+      "app_0": {
+        "triggers": {
+          "factory_uuid": "97eb5b24-1645-4861-9a2b-b54ffa5111f4",
+          "timestamp": "2025-11-01T00:09:05.272432"
+        }
+      },
+      "app_1": {
+        "triggers": {
+          "factory_uuid": "97eb5b24-1645-4861-9a2b-b54ffa5111f4",
+          "timestamp": "2025-11-01T00:09:05.272432"
+        }
+      },
+      "app_2": {
+        "triggers": {
+          "factory_uuid": "97eb5b24-1645-4861-9a2b-b54ffa5111f4",
+          "timestamp": "2025-11-01T00:09:05.272432"
+        }
+      }
+    },
+    "local_file": {
+      "welcome_txt": {
+        "content": "Bienvenido a la infraestructura IaC con patrones",
+        "filename": "${path.module}/bienvenida.txt"
+      }
+    }
+  }
+}

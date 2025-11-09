@@ -1,0 +1,20 @@
+{
+    "resource": {
+        "null_resource": {
+            "server": {
+                "provisioner": [
+                    {
+                        "local-exec": {
+                           "command": "printf 'Server hello-world\\nusa red: hello-local-network\\nIP asignada: 10.0.0.5\\n'"
+                        }
+                    }
+                ],
+                "triggers": {
+                    "name": "hello-world",
+                    "network_ip": "10.0.0.5",
+                    "subnetwork": "hello-local-network"
+                }
+            }
+        }
+    }
+}

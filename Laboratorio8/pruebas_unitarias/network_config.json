@@ -1,0 +1,24 @@
+{
+  "network_id": "net-001",
+  "region": "us-east-1",
+  "cidr_block": "10.0.0.0/16",
+  "subnets": [
+    {
+      "subnet_id": "subnet-001",
+      "cidr": "10.0.1.0/24",
+      "availability_zone": "us-east-1a",
+      "available_ips": 251
+    },
+    {
+      "subnet_id": "subnet-002",
+      "cidr": "10.0.2.0/24",
+      "availability_zone": "us-east-1b",
+      "available_ips": 251
+    }
+  ],
+  "status": "active",
+  "tags": {
+    "environment": "production",
+    "managed_by": "terraform"
+  }
+}
